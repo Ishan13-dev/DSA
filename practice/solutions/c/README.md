@@ -22,5 +22,15 @@ Compile a single file: `gcc filename.c -o run` (Windows: `run.exe`).
 18. [Character Frequency](./18-character-frequency.c)
 19. [Find Duplicate Characters](./19-duplicate-characters.c)
 20. [Remove Duplicate Characters](./20-remove-duplicate-characters.c)
+21. [Check Anagrams](./21-anagram-strings.c)
+22. [First Non-Repeating Character](./22-first-non-repeating-character.c)
+23. [Largest Array Element](./23-largest-array-element.c)
+24. [Smallest Array Element](./24-smallest-array-element.c)
+25. [Second Largest Distinct Element](./25-second-largest-element.c)
+26. [Second Smallest Distinct Element](./26-second-smallest-element.c)
+27. [Sum of Array Elements](./27-sum-array-elements.c)
+28. [Reverse an Array](./28-reverse-array.c)
+29. [Check if Array is Sorted](./29-check-array-sorted.c)
+30. [Remove Array Duplicates](./30-remove-duplicates-array.c)
 
-**Progress:** Questions 1–20 complete. Questions 21–40 pending.
+**Progress:** Solutions 1–30 are available. Formatting pass for questions 11–20 is pending; questions 1–10 follow the requested readable style.
