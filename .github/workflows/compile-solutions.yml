@@ -142,3 +142,23 @@ jobs:
             [ "$(printf '93\n' | /tmp/nth-fibonacci)" = "Input too large (maximum index is 92)" ]
           done
           echo "Numeric boundary smoke tests passed for both languages."
+
+      - name: Smoke-test unique common-array output (C and C++)
+        shell: bash
+        run: |
+          set -e
+          for language in c cpp; do
+            extension=c
+            compiler=gcc
+            standard=c11
+            if [ "$language" = cpp ]; then
+              extension=cpp
+              compiler=g++
+              standard=c++17
+            fi
+            file="practice/solutions/$language/34-common-elements-arrays.$extension"
+            "$compiler" -std="$standard" "$file" -o /tmp/common-elements
+            output=$(printf '4\n1 2 2 3\n3\n2 4 2\n' | /tmp/common-elements)
+            [ "$(echo "$output" | tr -s ' ' | sed 's/^ //;s/ $//')" = "2" ]
+          done
+          echo "Unique common-array smoke tests passed for both languages."
