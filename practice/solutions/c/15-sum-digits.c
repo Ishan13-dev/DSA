@@ -3,14 +3,17 @@
 #include <stdio.h>
 
 int main() {
-    int n, sum = 0;
-    scanf("%d", &n);
+    int input;
+    scanf("%d", &input);
+
+    long long n = input;
+    int sum = 0;
 
     if (n < 0)
         n = -n;
 
     while (n > 0) {
-        sum += n % 10;
+        sum += (int)(n % 10);
         n /= 10;
     }
 
