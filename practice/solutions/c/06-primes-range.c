@@ -1,3 +1,24 @@
 // Print Prime Numbers in a Range
 #include <stdio.h>
-int main(){int a,b;scanf("%d%d",&a,&b);for(int n=a;n<=b;n++){int p=n>=2;for(int d=2;d*d<=n;d++)if(n%d==0){p=0;break;}if(p)printf("%d ",n);}puts("");}
+
+int main() {
+    int start, end;
+    scanf("%d %d", &start, &end);
+
+    for (int n = start; n <= end; n++) {
+        int isPrime = (n >= 2);
+
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+
+        if (isPrime)
+            printf("%d ", n);
+    }
+
+    printf("\n");
+    return 0;
+}
