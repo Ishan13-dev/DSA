@@ -14,7 +14,9 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            if (a[i] + a[j] == target) {
+            long long pairSum = (long long)a[i] + a[j];
+
+            if (pairSum == target) {
                 printf("%d %d\n", a[i], a[j]);
                 found = 1;
                 break;
