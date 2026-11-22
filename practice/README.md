@@ -2,7 +2,7 @@
 
 A beginner-friendly practice collection for placement and coding-test preparation, based on a 40-question practice sheet.
 
-This is the dedicated repository for DSA practice. Solutions are provided in **C (C99)** and **C++ (C++17)** with clear formatting, straightforward logic, and simple variable names.
+Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatting, straightforward logic, and simple variable names.
 
 ## Code style
 - One statement per line; no compressed one-liners.
@@ -65,10 +65,9 @@ This is the dedicated repository for DSA practice. Solutions are provided in **C
 
 ## Progress
 - **Solutions available:** Questions 1–30 in both C and C++.
-- **Formatted to the requested style:** Questions 1–10 in C and C++.
-- **Questions 11–20:** Existing solutions; formatting pass still in progress.
+- **Formatted to the requested readable style:** Questions 1–20 in C and C++.
 - **Questions 21–30:** Added in both languages.
-- **Questions 31–40:** Next batch.
+- **Questions 31–40:** Next batch to implement.
 
 - [C solution index](solutions/c/README.md)
 - [C++ solution index](solutions/cpp/README.md)
