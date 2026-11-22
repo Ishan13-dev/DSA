@@ -1,6 +1,6 @@
-# C solutions (C99)
+# C solutions (C11)
 
-Compile a single file: `gcc filename.c -o run` (Windows: `run.exe`).
+Compile a single file: `gcc -std=c11 filename.c -o run` (Windows: `run.exe`).
 
 1. [Reverse a String](./01-reverse-string.c)
 2. [String Palindrome](./02-string-palindrome.c)
@@ -43,4 +43,4 @@ Compile a single file: `gcc filename.c -o run` (Windows: `run.exe`).
 39. [Maximum-Minimum Difference](./39-max-min-difference.c)
 40. [Pair with Given Sum](./40-pair-given-sum.c)
 
-**Progress:** All 40 question solutions are present. The formatting pass is complete for questions 1–20, and 21–40 follow the same readable style. Compilation and test cases are the next quality-check stage.
+**Progress:** All 40 solutions are present. Automated CI compiles all C and C++ files and runs smoke tests for integer edge cases. Array programs expect a valid positive size within the fixed 100-element capacity unless otherwise noted.
