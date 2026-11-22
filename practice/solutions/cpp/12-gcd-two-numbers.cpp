@@ -1,11 +1,14 @@
 // Find the GCD of Two Numbers
-// Euclid's algorithm repeatedly replaces (a, b) with (b, a % b).
+// Use long long so INT_MIN can be converted to a positive value safely.
 #include <iostream>
 using namespace std;
 
 int main() {
-    int a, b;
-    cin >> a >> b;
+    int inputA, inputB;
+    cin >> inputA >> inputB;
+
+    long long a = inputA;
+    long long b = inputB;
 
     if (a < 0)
         a = -a;
@@ -14,7 +17,7 @@ int main() {
         b = -b;
 
     while (b != 0) {
-        int remainder = a % b;
+        long long remainder = a % b;
         a = b;
         b = remainder;
     }
