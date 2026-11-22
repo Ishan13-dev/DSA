@@ -1,4 +1,5 @@
 // Factorial of a Number
+// 20! is the largest factorial that fits in a signed long long.
 #include <stdio.h>
 
 int main() {
@@ -8,6 +9,11 @@ int main() {
 
     if (n < 0) {
         printf("Factorial is not defined for negative numbers\n");
+        return 0;
+    }
+
+    if (n > 20) {
+        printf("Input too large (maximum is 20)\n");
         return 0;
     }
 
