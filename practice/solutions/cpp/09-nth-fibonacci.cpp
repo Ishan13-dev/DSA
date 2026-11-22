@@ -1,4 +1,5 @@
 // Find the Nth Fibonacci Number (0-based)
+// F92 fits in a signed long long; larger indexes are rejected.
 #include <iostream>
 using namespace std;
 
@@ -9,6 +10,11 @@ int main() {
 
     if (n < 0) {
         cout << "Invalid input" << endl;
+        return 0;
+    }
+
+    if (n > 92) {
+        cout << "Input too large (maximum index is 92)" << endl;
         return 0;
     }
 
