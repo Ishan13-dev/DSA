@@ -11,13 +11,15 @@ int main() {
 
     cin >> target;
 
-    bool found = false;
+    int found = 0;
 
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
-            if (a[i] + a[j] == target) {
+            long long pairSum = (long long)a[i] + a[j];
+
+            if (pairSum == target) {
                 cout << a[i] << " " << a[j] << endl;
-                found = true;
+                found = 1;
                 break;
             }
         }
