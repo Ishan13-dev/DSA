@@ -1,4 +1,26 @@
-// Check Prime Number
+// Check if a Number is Prime
 #include <iostream>
 using namespace std;
-int main(){int n;cin>>n;bool p=n>=2;for(int i=2;i*i<=n;i++)if(n%i==0){p=false;break;}cout<<(p?"Prime":"Not prime")<<"\n";}
+
+int main() {
+    int n;
+    bool isPrime = true;
+    cin >> n;
+
+    if (n < 2)
+        isPrime = false;
+
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime)
+        cout << "Prime" << endl;
+    else
+        cout << "Not prime" << endl;
+
+    return 0;
+}
