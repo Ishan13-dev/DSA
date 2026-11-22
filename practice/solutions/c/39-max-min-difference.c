@@ -20,6 +20,7 @@ int main() {
             smallest = a[i];
     }
 
-    printf("Difference = %d\n", largest - smallest);
+    long long difference = (long long)largest - smallest;
+    printf("Difference = %lld\n", difference);
     return 0;
 }
