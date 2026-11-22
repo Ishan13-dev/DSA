@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "practice/solutions/**"
+      - "scripts/**"
       - ".github/workflows/compile-solutions.yml"
   pull_request:
     paths:
       - "practice/solutions/**"
+      - "scripts/**"
       - ".github/workflows/compile-solutions.yml"
   workflow_dispatch:
 
