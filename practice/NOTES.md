@@ -30,7 +30,7 @@ This guide briefly explains the main idea used by each reference solution and gi
 | 17 | Vowels and consonants | Scan letters and classify each alphabetic character. | O(n) | O(1) |
 | 18 | Character frequency | Count each byte using a fixed frequency table. | O(n) | O(1) |
 | 19 | Duplicate characters | Count characters, then print repeated characters once. | O(n) | O(1) |
-| 20 | Remove duplicate characters | Keep the first occurrence of each character using a seen table. | O(n) | O(1) |
+| 20 | Remove duplicate characters | Keep the first occurrence of each character using a seen table. | O(n) | O(n) |
 | 21 | Anagrams | Increment counts for one word and decrement for the other. | O(n) | O(1) |
 | 22 | First non-repeating character | Count all characters, then scan in original order for count one. | O(n) | O(1) |
 
