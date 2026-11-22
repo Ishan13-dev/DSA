@@ -87,3 +87,31 @@ jobs:
             test_case /tmp/sum-digits "0\n" "Digit sum = 0"
           done
           echo "Integer edge-case smoke tests passed for both languages."
+
+      - name: Smoke-test array overflow edge cases (C and C++)
+        shell: bash
+        run: |
+          set -e
+          for language in c cpp; do
+            extension=c
+            compiler=gcc
+            standard=c11
+            if [ "$language" = cpp ]; then
+              extension=cpp
+              compiler=g++
+              standard=c++17
+            fi
+            base="practice/solutions/$language"
+            "$compiler" -std="$standard" "$base/27-sum-array-elements.$extension" -o /tmp/array-sum
+            "$compiler" -std="$standard" "$base/39-max-min-difference.$extension" -o /tmp/max-min-diff
+            "$compiler" -std="$standard" "$base/40-pair-given-sum.$extension" -o /tmp/pair-sum
+            sum=$(printf '2\n2147483647 -2147483648\n' | /tmp/array-sum)
+            diff=$(printf '2\n2147483647 -2147483648\n' | /tmp/max-min-diff)
+            pair=$(printf '4\n2 7 11 15\n9\n' | /tmp/pair-sum)
+            overflow_pair=$(printf '2\n2147483647 1\n2147483647\n' | /tmp/pair-sum)
+            [ "$sum" = "-1" ]
+            [ "$diff" = "Difference = 4294967295" ]
+            [ "$pair" = "2 7" ]
+            [ "$overflow_pair" = "No pair found" ]
+          done
+          echo "Array overflow edge-case smoke tests passed for both languages."
