@@ -32,5 +32,15 @@ Compile a single file: `gcc filename.c -o run` (Windows: `run.exe`).
 28. [Reverse an Array](./28-reverse-array.c)
 29. [Check if Array is Sorted](./29-check-array-sorted.c)
 30. [Remove Array Duplicates](./30-remove-duplicates-array.c)
+31. [Find Duplicate Elements](./31-duplicate-elements-array.c)
+32. [Find Missing Number](./32-missing-number-array.c)
+33. [Frequency of Array Elements](./33-frequency-array-elements.c)
+34. [Common Elements in Two Arrays](./34-common-elements-arrays.c)
+35. [Merge Two Sorted Arrays](./35-merge-sorted-arrays.c)
+36. [Intersection of Two Arrays](./36-intersection-arrays.c)
+37. [Union of Two Arrays](./37-union-arrays.c)
+38. [Move Zeros to End](./38-move-zeros-end.c)
+39. [Maximum-Minimum Difference](./39-max-min-difference.c)
+40. [Pair with Given Sum](./40-pair-given-sum.c)
 
-**Progress:** Questions 1–30 are available. Questions 1–20 are formatted to the requested readable style. Questions 31–40 are next.
+**Progress:** All 40 question solutions are present. The formatting pass is complete for questions 1–20, and 21–40 follow the same readable style. Compilation and test cases are the next quality-check stage.
