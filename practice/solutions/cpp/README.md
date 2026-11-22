@@ -33,4 +33,4 @@ Compile a single file: `g++ -std=c++17 filename.cpp -o run` (Windows: `run.exe`)
 29. [Check if Array is Sorted](./29-check-array-sorted.cpp)
 30. [Remove Array Duplicates](./30-remove-duplicates-array.cpp)
 
-**Progress:** Solutions 1–30 are available. Formatting pass for questions 11–20 is pending; questions 1–10 follow the requested readable style.
+**Progress:** Questions 1–30 are available. Questions 1–20 are formatted to the requested readable style. Questions 31–40 are next.
