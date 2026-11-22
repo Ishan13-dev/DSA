@@ -1,17 +1,22 @@
 # DSA Practice in C & C++
 
-A beginner-friendly 5–7 LPA placement preparation practice set based on the 40 questions visible in the provided sheet.
+A beginner-friendly practice collection for placement and coding-test preparation, based on a 40-question practice sheet.
 
-> This collection is currently hosted as a folder inside the `Profile` repository because the connected GitHub actions cannot create a new repository. It can be moved into a standalone repository later.
+This is the dedicated repository for DSA practice. Solutions are provided in **C (C99)** and **C++ (C++17)** with clear formatting, straightforward logic, and simple variable names.
+
+## Code style
+- One statement per line; no compressed one-liners.
+- Separate input, logic, and output sections with blank lines.
+- Consistent indentation and braces.
+- Beginner-readable loops and conditions.
 
 ## How to navigate
-- `solutions/c/` — C language solutions (C99)
-- `solutions/cpp/` — C++ solutions (C++17)
-- The solutions are kept simple, with comments and small examples.
+- `solutions/c/` — C solutions
+- `solutions/cpp/` — C++ solutions
 
 ## Compile and run
-**C:** `gcc file.c -o run` then `./run` (Windows: `run.exe`)  
-**C++:** `g++ -std=c++17 file.cpp -o run` then `./run`
+**C:** `gcc filename.c -o run` then `./run` (Windows: `run.exe`)  
+**C++:** `g++ -std=c++17 filename.cpp -o run` then `./run`
 
 ## Question list (40)
 ### Numbers
@@ -58,8 +63,14 @@ A beginner-friendly 5–7 LPA placement preparation practice set based on the 40
 39. Find Maximum and Minimum Difference
 40. Find Pair with Given Sum
 
-## Current solution progress
-- [C solutions](solutions/c/README.md)
-- [C++ solutions](solutions/cpp/README.md)
+## Progress
+- **Solutions available:** Questions 1–30 in both C and C++.
+- **Formatted to the requested style:** Questions 1–10 in C and C++.
+- **Questions 11–20:** Existing solutions; formatting pass still in progress.
+- **Questions 21–30:** Added in both languages.
+- **Questions 31–40:** Next batch.
 
-Start by attempting the question yourself, then use the solution as a reference. Trace variables with small input values and explain the approach in your own words.
+- [C solution index](solutions/c/README.md)
+- [C++ solution index](solutions/cpp/README.md)
+
+Try each problem before opening the reference solution. Trace the code with small inputs and practice explaining the approach.
