@@ -67,10 +67,10 @@ Solutions are provided in **C (C11)** and **C++ (C++17)** with readable formatti
 - **All 40 questions:** Solutions available in both C and C++.
 - **Questions 1–20:** Formatted to the requested readable style.
 - **Questions 21–40:** Added in both languages and written in the same readable style.
-- **Automated QA:** GitHub Actions compiles every C and C++ solution and runs smoke tests for integer boundary/overflow cases in GCD, LCM, digit count, digit sum, array sum, max-min difference, pair sum, reverse integer, factorial, and Fibonacci. The latest workflow run is linked below.
+- **Automated QA:** GitHub Actions compiles every C and C++ solution, runs representative sample tests for all 40 questions in both languages (80 program runs), and checks numeric/array overflow edge cases. The latest workflow run is linked below.
 - [Compile workflow](../../actions/workflows/compile-solutions.yml)
 
-**Remaining QA:** Add broader sample tests for all questions, review algorithm behavior and array-size assumptions, and then add concise explanations, sample inputs/outputs, and complexity notes.
+**Remaining QA:** Review algorithm behavior and array-size assumptions, add a few more edge cases where useful, and then add concise explanations and complexity notes to each problem.
 
 - [C solution index](solutions/c/README.md)
 - [C++ solution index](solutions/cpp/README.md)
