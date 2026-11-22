@@ -22,5 +22,15 @@ Compile a single file: `g++ -std=c++17 filename.cpp -o run` (Windows: `run.exe`)
 18. [Character Frequency](./18-character-frequency.cpp)
 19. [Find Duplicate Characters](./19-duplicate-characters.cpp)
 20. [Remove Duplicate Characters](./20-remove-duplicate-characters.cpp)
+21. [Check Anagrams](./21-anagram-strings.cpp)
+22. [First Non-Repeating Character](./22-first-non-repeating-character.cpp)
+23. [Largest Array Element](./23-largest-array-element.cpp)
+24. [Smallest Array Element](./24-smallest-array-element.cpp)
+25. [Second Largest Distinct Element](./25-second-largest-element.cpp)
+26. [Second Smallest Distinct Element](./26-second-smallest-element.cpp)
+27. [Sum of Array Elements](./27-sum-array-elements.cpp)
+28. [Reverse an Array](./28-reverse-array.cpp)
+29. [Check if Array is Sorted](./29-check-array-sorted.cpp)
+30. [Remove Array Duplicates](./30-remove-duplicates-array.cpp)
 
-**Progress:** Questions 1–20 complete. Questions 21–40 pending.
+**Progress:** Solutions 1–30 are available. Formatting pass for questions 11–20 is pending; questions 1–10 follow the requested readable style.
