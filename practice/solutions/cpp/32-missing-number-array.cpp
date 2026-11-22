@@ -1,0 +1,17 @@
+// Find the Missing Number from 1 to N
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, a[100], sum = 0;
+    cin >> n;
+
+    for (int i = 0; i < n - 1; i++) {
+        cin >> a[i];
+        sum += a[i];
+    }
+
+    int expectedSum = n * (n + 1) / 2;
+    cout << expectedSum - sum << endl;
+    return 0;
+}
