@@ -1,9 +1,9 @@
-// Find Common Elements in Two Arrays
+// Find Common Elements in Two Arrays (Unique Values)
 #include <iostream>
 using namespace std;
 
 int main() {
-    int n, m, a[100], b[100], printed[100] = {0};
+    int n, m, a[100], b[100], common[100], count = 0;
     cin >> n;
 
     for (int i = 0; i < n; i++)
@@ -14,21 +14,34 @@ int main() {
     for (int i = 0; i < m; i++)
         cin >> b[i];
 
-    bool found = false;
-
     for (int i = 0; i < n; i++) {
+        int existsInB = 0;
+        int alreadyPrinted = 0;
+
         for (int j = 0; j < m; j++) {
-            if (a[i] == b[j] && !printed[i]) {
-                cout << a[i] << " ";
-                printed[i] = 1;
-                found = true;
+            if (a[i] == b[j]) {
+                existsInB = 1;
                 break;
             }
         }
+
+        for (int j = 0; j < count; j++) {
+            if (common[j] == a[i]) {
+                alreadyPrinted = 1;
+                break;
+            }
+        }
+
+        if (existsInB && !alreadyPrinted)
+            common[count++] = a[i];
     }
 
-    if (!found)
+    if (count == 0)
         cout << "No common elements";
+    else {
+        for (int i = 0; i < count; i++)
+            cout << common[i] << " ";
+    }
 
     cout << endl;
     return 0;
