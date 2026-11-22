@@ -70,7 +70,7 @@ Solutions are provided in **C (C11)** and **C++ (C++17)** with readable formatti
 - **Automated QA:** GitHub Actions compiles every C and C++ solution, runs representative sample tests for all 40 questions in both languages (80 program runs), and checks numeric/array overflow edge cases. The latest workflow run is linked below.
 - [Compile workflow](../../actions/workflows/compile-solutions.yml)
 
-**Remaining QA:** Review algorithm behavior and array-size assumptions, add a few more edge cases where useful, and then add concise explanations and complexity notes to each problem.
+**QA progress:** All 80 files compile, all 80 representative sample tests pass, and targeted numeric/array boundary checks pass. See NOTES.md for complexity estimates and assumptions; array inputs must remain within the documented 100-element limit.
 
 - [C solution index](solutions/c/README.md)
 - [C++ solution index](solutions/cpp/README.md)
