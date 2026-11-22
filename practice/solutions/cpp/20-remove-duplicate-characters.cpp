@@ -1,5 +1,21 @@
-// Problem 20: Remove Duplicate Characters
-// Keep only the first occurrence of each character, preserving order; spaces are preserved too.
+// Remove Duplicate Characters
+// Keep the first occurrence of each character, preserving the original order and spaces.
 #include <iostream>
 using namespace std;
-int main(){string s,out;bool seen[256]={false};cout<<"Enter text: ";getline(cin,s);for(unsigned char ch:s)if(!seen[ch]){seen[ch]=true;out+=(char)ch;}cout<<"Without duplicates: "<<out<<"\n";}
+
+int main() {
+    string s, output;
+    bool seen[256] = {false};
+
+    getline(cin, s);
+
+    for (unsigned char ch : s) {
+        if (!seen[ch]) {
+            seen[ch] = true;
+            output += (char)ch;
+        }
+    }
+
+    cout << "Without duplicates: " << output << endl;
+    return 0;
+}
