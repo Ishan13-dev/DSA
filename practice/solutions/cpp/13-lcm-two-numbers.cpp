@@ -1,19 +1,25 @@
 // Find the LCM of Two Numbers
-// LCM(a, b) = |a * b| / GCD(a, b). If either number is zero, LCM is zero.
+// Use long long to avoid overflow when taking absolute values or multiplying.
 #include <iostream>
 using namespace std;
 
 int main() {
-    int a, b;
-    cin >> a >> b;
+    int inputA, inputB;
+    cin >> inputA >> inputB;
 
-    int x = (a < 0) ? -a : a;
-    int y = (b < 0) ? -b : b;
+    long long x = inputA;
+    long long y = inputB;
 
-    int p = x, q = y;
+    if (x < 0)
+        x = -x;
+
+    if (y < 0)
+        y = -y;
+
+    long long p = x, q = y;
 
     while (q != 0) {
-        int remainder = p % q;
+        long long remainder = p % q;
         p = q;
         q = remainder;
     }
