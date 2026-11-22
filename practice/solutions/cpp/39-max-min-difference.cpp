@@ -21,6 +21,7 @@ int main() {
             smallest = a[i];
     }
 
-    cout << "Difference = " << largest - smallest << endl;
+    long long difference = (long long)largest - smallest;
+    cout << "Difference = " << difference << endl;
     return 0;
 }
