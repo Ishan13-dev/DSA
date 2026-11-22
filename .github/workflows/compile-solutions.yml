@@ -1,0 +1,48 @@
+name: Compile DSA Solutions
+
+on:
+  push:
+    paths:
+      - "practice/solutions/**"
+      - ".github/workflows/compile-solutions.yml"
+  pull_request:
+    paths:
+      - "practice/solutions/**"
+      - ".github/workflows/compile-solutions.yml"
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install compilers
+        run: sudo apt-get update && sudo apt-get install -y gcc g++
+
+      - name: Compile all C solutions
+        shell: bash
+        run: |
+          set -e
+          mkdir -p /tmp/dsa-build/c
+          count=0
+          while IFS= read -r file; do
+            name=$(basename "$file" .c)
+            gcc -std=c11 -Wall -Wextra "$file" -o "/tmp/dsa-build/c/$name"
+            count=$((count + 1))
+          done < <(find practice/solutions/c -type f -name '*.c' | sort)
+          echo "Compiled $count C files successfully."
+
+      - name: Compile all C++ solutions
+        shell: bash
+        run: |
+          set -e
+          mkdir -p /tmp/dsa-build/cpp
+          count=0
+          while IFS= read -r file; do
+            name=$(basename "$file" .cpp)
+            g++ -std=c++17 -Wall -Wextra "$file" -o "/tmp/dsa-build/cpp/$name"
+            count=$((count + 1))
+          done < <(find practice/solutions/cpp -type f -name '*.cpp' | sort)
+          echo "Compiled $count C++ files successfully."
