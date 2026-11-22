@@ -1,11 +1,14 @@
 // Count Digits in a Number
-// Zero has one digit. The sign of a negative number is not counted.
+// Zero has one digit. The sign is not counted; long long handles INT_MIN.
 #include <iostream>
 using namespace std;
 
 int main() {
-    int n, count = 0;
-    cin >> n;
+    int input;
+    cin >> input;
+
+    long long n = input;
+    int count = 0;
 
     if (n < 0)
         n = -n;
