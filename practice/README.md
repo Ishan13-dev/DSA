@@ -2,7 +2,7 @@
 
 A beginner-friendly practice collection for placement and coding-test preparation, based on a 40-question practice sheet.
 
-Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatting, straightforward logic, and simple variable names.
+Solutions are provided in **C (C11)** and **C++ (C++17)** with readable formatting, straightforward logic, and simple variable names.
 
 ## Code style
 - One statement per line; no compressed one-liners.
@@ -15,7 +15,7 @@ Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatti
 - `solutions/cpp/` — C++ solutions
 
 ## Compile and run
-**C:** `gcc filename.c -o run` then `./run` (Windows: `run.exe`)  
+**C:** `gcc -std=c11 filename.c -o run` then `./run` (Windows: `run.exe`)  
 **C++:** `g++ -std=c++17 filename.cpp -o run` then `./run`
 
 ## Question list (40)
@@ -67,7 +67,10 @@ Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatti
 - **All 40 questions:** Solutions available in both C and C++.
 - **Questions 1–20:** Formatted to the requested readable style.
 - **Questions 21–40:** Added in both languages and written in the same readable style.
-- **Next:** Compile and test every solution; then we can add explanations, sample inputs/outputs, and complexity notes.
+- **Automated compile check:** A GitHub Actions workflow compiles all C and C++ solution files on pushes and pull requests. The first run is in progress; compile status will be linked below.
+- [Compile workflow](../../actions/workflows/compile-solutions.yml)
+
+**Next QA steps:** Review compiler warnings, run logic tests with sample and edge-case inputs, then add explanations, sample inputs/outputs, and complexity notes.
 
 - [C solution index](solutions/c/README.md)
 - [C++ solution index](solutions/cpp/README.md)
