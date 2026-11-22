@@ -162,3 +162,6 @@ jobs:
             [ "$(echo "$output" | tr -s ' ' | sed 's/^ //;s/ $//')" = "2" ]
           done
           echo "Unique common-array smoke tests passed for both languages."
+
+      - name: Run sample smoke tests for all 40 solutions
+        run: python3 scripts/smoke_test_all.py
