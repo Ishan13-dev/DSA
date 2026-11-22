@@ -53,7 +53,7 @@ Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatti
 29. Check if an Array is Sorted
 30. Remove Duplicates from an Array
 31. Find Duplicate Elements in an Array
-32. Find Missing Number in an Array
+32. Find Missing Number in an Array (1 to N)
 33. Find Frequency of Array Elements
 34. Find Common Elements in Two Arrays
 35. Merge Two Sorted Arrays
@@ -64,10 +64,10 @@ Solutions are provided in **C (C99)** and **C++ (C++17)** with readable formatti
 40. Find Pair with Given Sum
 
 ## Progress
-- **Solutions available:** Questions 1–30 in both C and C++.
-- **Formatted to the requested readable style:** Questions 1–20 in C and C++.
-- **Questions 21–30:** Added in both languages.
-- **Questions 31–40:** Next batch to implement.
+- **All 40 questions:** Solutions available in both C and C++.
+- **Questions 1–20:** Formatted to the requested readable style.
+- **Questions 21–40:** Added in both languages and written in the same readable style.
+- **Next:** Compile and test every solution; then we can add explanations, sample inputs/outputs, and complexity notes.
 
 - [C solution index](solutions/c/README.md)
 - [C++ solution index](solutions/cpp/README.md)
