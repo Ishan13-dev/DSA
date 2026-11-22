@@ -1,3 +1,19 @@
-// Factorial (values above 20 overflow long long)
+// Factorial of a Number
 #include <stdio.h>
-int main(){int n;long long f=1;scanf("%d",&n);if(n<0){puts("Invalid input");return 0;}for(int i=1;i<=n;i++)f*=i;printf("%lld\n",f);}
+
+int main() {
+    int n;
+    long long factorial = 1;
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Factorial is not defined for negative numbers\n");
+        return 0;
+    }
+
+    for (int i = 1; i <= n; i++)
+        factorial *= i;
+
+    printf("%lld\n", factorial);
+    return 0;
+}
