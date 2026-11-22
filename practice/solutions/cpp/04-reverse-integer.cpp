@@ -1,4 +1,17 @@
 // Reverse an Integer
 #include <iostream>
 using namespace std;
-int main(){int n,rev=0;cin>>n;while(n!=0){rev=rev*10+n%10;n/=10;}cout<<rev<<"\n";}
+
+int main() {
+    int n, reversed = 0;
+    cin >> n;
+
+    while (n != 0) {
+        int digit = n % 10;
+        reversed = reversed * 10 + digit;
+        n /= 10;
+    }
+
+    cout << reversed << endl;
+    return 0;
+}
