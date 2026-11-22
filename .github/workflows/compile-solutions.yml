@@ -115,3 +115,30 @@ jobs:
             [ "$overflow_pair" = "No pair found" ]
           done
           echo "Array overflow edge-case smoke tests passed for both languages."
+
+      - name: Smoke-test numeric limits (C and C++)
+        shell: bash
+        run: |
+          set -e
+          for language in c cpp; do
+            extension=c
+            compiler=gcc
+            standard=c11
+            if [ "$language" = cpp ]; then
+              extension=cpp
+              compiler=g++
+              standard=c++17
+            fi
+            base="practice/solutions/$language"
+            "$compiler" -std="$standard" "$base/04-reverse-integer.$extension" -o /tmp/reverse-int
+            "$compiler" -std="$standard" "$base/07-factorial.$extension" -o /tmp/factorial
+            "$compiler" -std="$standard" "$base/08-fibonacci-series.$extension" -o /tmp/fibonacci-series
+            "$compiler" -std="$standard" "$base/09-nth-fibonacci.$extension" -o /tmp/nth-fibonacci
+            [ "$(printf '1534236469\n' | /tmp/reverse-int)" = "9646324351" ]
+            [ "$(printf '20\n' | /tmp/factorial)" = "2432902008176640000" ]
+            [ "$(printf '21\n' | /tmp/factorial)" = "Input too large (maximum is 20)" ]
+            [ "$(printf '94\n' | /tmp/fibonacci-series)" = "Input too large (maximum is 93 terms)" ]
+            [ "$(printf '92\n' | /tmp/nth-fibonacci)" = "7540113804746346429" ]
+            [ "$(printf '93\n' | /tmp/nth-fibonacci)" = "Input too large (maximum index is 92)" ]
+          done
+          echo "Numeric boundary smoke tests passed for both languages."
